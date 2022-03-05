@@ -14,9 +14,7 @@ from astropy.coordinates import SkyCoord
 
 #Code based on Graham Doskoch's Pulsar of the Day Twitter Bot
 
-# The directory where the database is being stored must be specified, as must the relevant credentials
-# for the Twitter account. I've removed mine from the public version of the script, for security
-# reasons. If you're just running this locally, though, the Twitter information can be ignored.
+# Enter path file to pulsar database here
 directory = ''
 database = 'psrcat.db'
 
@@ -30,6 +28,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-local', action='store_true')
 parser.add_argument('-manual')
 args = parser.parse_args()
+# Set arguments to always be true
 args.local = True
 
 # Transforms the catalog file into a list that's easier to interpret
